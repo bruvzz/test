@@ -1085,11 +1085,11 @@ function lib:Window(text, preset, closebind)
             RainbowToggleCorner.Parent = RainbowToggle
 
             RainbowToggleTitle.Name = "RainbowToggleTitle"
-            RainbowToggleTitle.Parent = RainbowToggle
+            RainbowToggleTitle.Parent = Colorpicker
             RainbowToggleTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             RainbowToggleTitle.BackgroundTransparency = 1.000
             RainbowToggleTitle.Size = UDim2.new(0, 33, 0, 32)
-            RainbowToggleTitle.Position = UDim2.new(1.25814295, 0, 1.09037197, 0)
+            RainbowToggleTitle.Position = UDim2.new(0.691, 0, 0.144, 0)
             RainbowToggleTitle.Font = Enum.Font.Gotham
             RainbowToggleTitle.Text = "Rainbow"
             RainbowToggleTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
@@ -1099,7 +1099,7 @@ function lib:Window(text, preset, closebind)
             FrameRainbowToggle1.Name = "FrameRainbowToggle1"
             FrameRainbowToggle1.Parent = RainbowToggle
             FrameRainbowToggle1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-            FrameRainbowToggle1.Position = UDim2.new(0.819, 0, 0.428, 0)
+            FrameRainbowToggle1.Position = UDim2.new(0.732, 0, 0.428, 0)
             FrameRainbowToggle1.Size = UDim2.new(0, 37, 0, 18)
 
             FrameRainbowToggle1Corner.Name = "FrameRainbowToggle1Corner"
