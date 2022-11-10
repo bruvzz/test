@@ -1100,7 +1100,7 @@ function lib:Window(text, preset, closebind)
             RainbowToggle.Name = "RainbowToggle"
             RainbowToggle.Parent = ColorpickerTitle
             RainbowToggle.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
-            RainbowToggle.Position = UDim2.new(1.26349044, 0, 2.12684202, 0)
+            RainbowToggle.Position = UDim2.new(1.4, 0, 2.12684202, 0)
             RainbowToggle.Size = UDim2.new(0, 104, 0, 32)
             RainbowToggle.AutoButtonColor = false
             RainbowToggle.Font = Enum.Font.SourceSans
