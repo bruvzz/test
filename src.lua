@@ -530,7 +530,7 @@ function lib:Window(text, preset, closebind)
 
             FrameToggle3Corner.Name = "FrameToggle3Corner"
             FrameToggle3Corner.Parent = FrameToggle3
-            FrameToggle3.CornerRadius = UDim.new(0, 4)
+            FrameToggle3Corner.CornerRadius = UDim.new(0, 4)
 
             FrameToggleCircle.Name = "FrameToggleCircle"
             FrameToggleCircle.Parent = FrameToggle1
