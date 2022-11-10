@@ -1085,15 +1085,14 @@ function lib:Window(text, preset, closebind)
             RainbowToggleCorner.Parent = RainbowToggle
 
             RainbowToggleTitle.Name = "RainbowToggleTitle"
-            RainbowToggleTitle.Parent = Colorpicker
+            RainbowToggleTitle.Parent = RainbowToggle
             RainbowToggleTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
             RainbowToggleTitle.BackgroundTransparency = 1.000
             RainbowToggleTitle.Size = UDim2.new(0, 33, 0, 32)
-            RainbowToggleTitle.Position = UDim2.new(0.691, 0, 0.144, 0)
             RainbowToggleTitle.Font = Enum.Font.Gotham
             RainbowToggleTitle.Text = "Rainbow"
             RainbowToggleTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-            RainbowToggleTitle.TextSize = 14.000
+            RainbowToggleTitle.TextSize = 12.000
             RainbowToggleTitle.TextXAlignment = Enum.TextXAlignment.Left
 
             FrameRainbowToggle1.Name = "FrameRainbowToggle1"
