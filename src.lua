@@ -188,6 +188,9 @@ function lib:Window(text, preset, closebind)
     MainProps.BackgroundTransparency = 0
     MainProps.Position = UDim2.new(0.5, 0, 0.5, 0)
 
+    local TweenPlay1 = TweenService:Create(Main, MainAnimation, MainProps)
+    TweenPlay1:Play()
+
     MakeDraggable(DragFrame, Main)
 
     local uitoggled = false
