@@ -468,7 +468,6 @@ function lib:Window(text, preset, closebind)
             local Button2Props = {}
 
             Button2Props.BackgroundTransparency = 0
-            Button2Props.Position = UDim2.new(0.154, 0, 0.216, 0)
 
             local TweenPlay3 = TweenService:Create(Button, Button2Animation, Button2Props)
             TweenPlay3:Play()
@@ -603,7 +602,7 @@ function lib:Window(text, preset, closebind)
             local ToggleProps = {}
 
             ToggleProps.BackgroundTransparency = 0
-            ToggleProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+            ToggleProps.Position = UDim2.new(0.215625003, 0, 0.446271926, 0)
 
             local TweenPlay4 = TweenService:Create(Toggle, ToggleAnimation, ToggleProps)
             TweenPlay4:Play()
@@ -819,7 +818,7 @@ function lib:Window(text, preset, closebind)
             local SliderProps = {}
 
             SliderProps.BackgroundTransparency = 0
-            SliderProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+            SliderProps.Position = UDim2.new(-0.48035714, 0, -0.570532918, 0)
 
             local TweenPlay5 = TweenService:Create(Slider, SliderAnimation, SliderProps)
             TweenPlay5:Play()
@@ -967,7 +966,7 @@ function lib:Window(text, preset, closebind)
             local DropdownProps = {}
 
             DropdownProps.BackgroundTransparency = 0
-            DropdownProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+            DropdownProps.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
 
             local TweenPlay6 = TweenService:Create(Dropdown, DropdownAnimation, DropdownProps)
             TweenPlay6:Play()
@@ -1304,7 +1303,7 @@ function lib:Window(text, preset, closebind)
             local ColorpickerProps = {}
 
             ColorpickerProps.BackgroundTransparency = 0
-            ColorpickerProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+            ColorpickerProps.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
 
             local TweenPlay7 = TweenService:Create(Colorpicker, ColorpickerAnimation, ColorpickerProps)
             TweenPlay7:Play()
@@ -1600,7 +1599,6 @@ function lib:Window(text, preset, closebind)
             local LabelProps = {}
 
             LabelProps.BackgroundTransparency = 0
-            LabelProps.Position = UDim2.new(0.154, 0, 0.216, 0)
 
             local TweenPlay8 = TweenService:Create(Label, LabelAnimation, LabelProps)
             TweenPlay8:Play()
@@ -1677,7 +1675,7 @@ function lib:Window(text, preset, closebind)
             local TextboxProps = {}
 
             TextboxProps.BackgroundTransparency = 0
-            TextboxProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+            TextboxProps.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
 
             local TweenPlay9 = TweenService:Create(Textbox, TextboxAnimation, TextboxProps)
             TweenPlay9:Play()
