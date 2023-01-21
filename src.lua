@@ -104,7 +104,6 @@ function lib:Window(text, preset, closebind)
     Main.Parent = ui
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    Main.BackgroundTransparency = 1.000
     Main.BorderSizePixel = 0
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 547, 0, 391)
@@ -188,9 +187,6 @@ function lib:Window(text, preset, closebind)
 
     MainProps.BackgroundTransparency = 0
     MainProps.Position = UDim2.new(0.5, 0, 0.5, 0)
-
-    local TweenPlay = TweenService:Create(Main, MainAnimation, MainProps)
-    TweenPlay:Play()
 
     MakeDraggable(DragFrame, Main)
 
@@ -367,6 +363,23 @@ function lib:Window(text, preset, closebind)
             Tab.Visible = true
         end
 
+        local ButtonAnimation = TweenInfo.new(
+            0.2,
+            Enum.EasingStyle.Sine,
+            Enum.EasingDirection.In,
+            0,
+            false,
+            0
+        )
+
+        local ButtonProps = {}
+
+        ButtonProps.BackgroundTransparency = 0
+        ButtonProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+        local TweenPlay2 = TweenService:Create(TabTitle, ButtonAnimation, ButtonProps)
+        TweenPlay2:Play()
+
         TabBtn.MouseButton1Click:Connect(
             function()
                 for i, v in next, TabFolder:GetChildren() do
@@ -440,6 +453,23 @@ function lib:Window(text, preset, closebind)
             ButtonTitle.TextSize = 14.000
             ButtonTitle.TextXAlignment = Enum.TextXAlignment.Left
 
+            local Button2Animation = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local Button2Props = {}
+
+            Button2Props.BackgroundTransparency = 0
+            Button2Props.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+            local TweenPlay3 = TweenService:Create(Button, Button2Animation, Button2Props)
+            TweenPlay3:Play()
+            
             Button.MouseEnter:Connect(
                 function()
                     TweenService:Create(
@@ -557,6 +587,23 @@ function lib:Window(text, preset, closebind)
             FrameToggleCircleCorner.Name = "FrameToggleCircleCorner"
             FrameToggleCircleCorner.Parent = FrameToggleCircle
             FrameToggleCircleCorner.CornerRadius = UDim.new(0, 4)
+
+            local ToggleAnimation = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local ToggleProps = {}
+
+            ToggleProps.BackgroundTransparency = 0
+            ToggleProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+            local TweenPlay4 = TweenService:Create(Toggle, ToggleAnimation, ToggleProps)
+            TweenPlay4:Play()
 
             coroutine.wrap(
                 function()
@@ -757,6 +804,23 @@ function lib:Window(text, preset, closebind)
             SlideCircle.Image = "rbxassetid://3570695787"
             SlideCircle.ImageColor3 = PresetColor
 
+            local SliderAnimation = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local SliderProps = {}
+
+            SliderProps.BackgroundTransparency = 0
+            SliderProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+            local TweenPlay5 = TweenService:Create(Slider, SliderAnimation, SliderProps)
+            TweenPlay5:Play()
+
             coroutine.wrap(
                 function()
                     while wait() do
@@ -887,6 +951,23 @@ function lib:Window(text, preset, closebind)
             DropLayout.Name = "DropLayout"
             DropLayout.Parent = DropItemHolder
             DropLayout.SortOrder = Enum.SortOrder.LayoutOrder
+
+            local DropdownAnimation = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local DropdownProps = {}
+
+            DropdownProps.BackgroundTransparency = 0
+            DropdownProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+            local TweenPlay6 = TweenService:Create(Dropdown, DropdownAnimation, DropdownProps)
+            TweenPlay6:Play()
 
             DropdownBtn.MouseButton1Click:Connect(
                 function()
@@ -1021,9 +1102,6 @@ function lib:Window(text, preset, closebind)
             local ColorpickerTitle = Instance.new("TextLabel")
             local BoxColor = Instance.new("Frame")
             local BoxColorCorner = Instance.new("UICorner")
-            local ConfirmBtn = Instance.new("TextButton")
-            local ConfirmBtnCorner = Instance.new("UICorner")
-            local ConfirmBtnTitle = Instance.new("TextLabel")
             local ColorpickerBtn = Instance.new("TextButton")
             local RainbowToggle = Instance.new("TextButton")
             local RainbowToggleCorner = Instance.new("UICorner")
@@ -1077,32 +1155,6 @@ function lib:Window(text, preset, closebind)
             BoxColorCorner.Name = "BoxColorCorner"
             BoxColorCorner.Parent = BoxColor
 
-            ConfirmBtn.Name = "ConfirmBtn"
-            ConfirmBtn.Parent = ColorpickerTitle
-            ConfirmBtn.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
-            ConfirmBtn.Position = UDim2.new(1.25814295, 0, 1.09037197, 0)
-            ConfirmBtn.Size = UDim2.new(0, 105, 0, 32)
-            ConfirmBtn.AutoButtonColor = false
-            ConfirmBtn.Font = Enum.Font.SourceSans
-            ConfirmBtn.Text = ""
-            ConfirmBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
-            ConfirmBtn.TextSize = 14.000
-
-            ConfirmBtnCorner.CornerRadius = UDim.new(0, 5)
-            ConfirmBtnCorner.Name = "ConfirmBtnCorner"
-            ConfirmBtnCorner.Parent = ConfirmBtn
-
-            ConfirmBtnTitle.Name = "ConfirmBtnTitle"
-            ConfirmBtnTitle.Parent = ConfirmBtn
-            ConfirmBtnTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            ConfirmBtnTitle.BackgroundTransparency = 1.000
-            ConfirmBtnTitle.Size = UDim2.new(0, 33, 0, 32)
-            ConfirmBtnTitle.Font = Enum.Font.Gotham
-            ConfirmBtnTitle.Text = "Confirm"
-            ConfirmBtnTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-            ConfirmBtnTitle.TextSize = 14.000
-            ConfirmBtnTitle.TextXAlignment = Enum.TextXAlignment.Left
-
             ColorpickerBtn.Name = "ColorpickerBtn"
             ColorpickerBtn.Parent = ColorpickerTitle
             ColorpickerBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -1116,6 +1168,7 @@ function lib:Window(text, preset, closebind)
             RainbowToggle.Name = "RainbowToggle"
             RainbowToggle.Parent = ColorpickerTitle
             RainbowToggle.BackgroundColor3 = Color3.fromRGB(31, 31, 31)
+            RainbowToggle.BackgroundTransparency = 1.000
             RainbowToggle.Position = UDim2.new(1.26349044, 0, 2.12684202, 0)
             RainbowToggle.Size = UDim2.new(0, 104, 0, 32)
             RainbowToggle.AutoButtonColor = false
@@ -1136,17 +1189,18 @@ function lib:Window(text, preset, closebind)
             RainbowToggleTitle.Font = Enum.Font.Gotham
             RainbowToggleTitle.Text = "Rainbow"
             RainbowToggleTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-            RainbowToggleTitle.TextSize = 14.000
+            RainbowToggleTitle.TextSize = 12.000
             RainbowToggleTitle.TextXAlignment = Enum.TextXAlignment.Left
 
             FrameRainbowToggle1.Name = "FrameRainbowToggle1"
             FrameRainbowToggle1.Parent = RainbowToggle
             FrameRainbowToggle1.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-            FrameRainbowToggle1.Position = UDim2.new(0.649999976, 0, 0.186000004, 0)
+            FrameRainbowToggle1.Position = UDim2.new(0.732, 0, 0.428, 0)
             FrameRainbowToggle1.Size = UDim2.new(0, 37, 0, 18)
 
             FrameRainbowToggle1Corner.Name = "FrameRainbowToggle1Corner"
             FrameRainbowToggle1Corner.Parent = FrameRainbowToggle1
+            FrameRainbowToggle1Corner.CornerRadius = UDim.new(0, 4)
 
             FrameRainbowToggle2.Name = "FrameRainbowToggle2"
             FrameRainbowToggle2.Parent = FrameRainbowToggle1
@@ -1156,6 +1210,7 @@ function lib:Window(text, preset, closebind)
 
             FrameRainbowToggle2_2.Name = "FrameRainbowToggle2"
             FrameRainbowToggle2_2.Parent = FrameRainbowToggle2
+            FrameRainbowToggle2_2.CornerRadius = UDim.new(0, 4)
 
             FrameRainbowToggle3.Name = "FrameRainbowToggle3"
             FrameRainbowToggle3.Parent = FrameRainbowToggle1
@@ -1165,15 +1220,17 @@ function lib:Window(text, preset, closebind)
 
             FrameToggle3.Name = "FrameToggle3"
             FrameToggle3.Parent = FrameRainbowToggle3
+            FrameToggle3.CornerRadius = UDim.new(0, 4)
 
             FrameRainbowToggleCircle.Name = "FrameRainbowToggleCircle"
             FrameRainbowToggleCircle.Parent = FrameRainbowToggle1
             FrameRainbowToggleCircle.BackgroundColor3 = Color3.fromRGB(50, 50, 50)
-            FrameRainbowToggleCircle.Position = UDim2.new(0.127000004, 0, 0.222000003, 0)
-            FrameRainbowToggleCircle.Size = UDim2.new(0, 10, 0, 10)
+            FrameRainbowToggleCircle.Position = UDim2.new(-0.4, 0, -0.3, 0)
+            FrameRainbowToggleCircle.Size = UDim2.new(0, 25, 0, 25)
 
             FrameRainbowToggleCircleCorner.Name = "FrameRainbowToggleCircleCorner"
             FrameRainbowToggleCircleCorner.Parent = FrameRainbowToggleCircle
+            FrameRainbowToggleCircleCorner.CornerRadius = UDim.new(0, 4)
 
             Color.Name = "Color"
             Color.Parent = ColorpickerTitle
@@ -1231,6 +1288,23 @@ function lib:Window(text, preset, closebind)
             HueSelection.Size = UDim2.new(0, 18, 0, 18)
             HueSelection.Image = "http://www.roblox.com/asset/?id=4805639000"
             HueSelection.Visible = false
+
+            local ColorpickerAnimation = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local ColorpickerProps = {}
+
+            ColorpickerProps.BackgroundTransparency = 0
+            ColorpickerProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+            local TweenPlay7 = TweenService:Create(Colorpicker, ColorpickerAnimation, ColorpickerProps)
+            TweenPlay7:Play()
 
             coroutine.wrap(
                 function()
@@ -1404,11 +1478,11 @@ function lib:Window(text, preset, closebind)
                         ):Play()
                         TweenService:Create(
                             FrameRainbowToggleCircle,
-                            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                            TweenInfo.new(.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {BackgroundColor3 = Color3.fromRGB(255, 255, 255)}
                         ):Play()
                         FrameRainbowToggleCircle:TweenPosition(
-                            UDim2.new(0.587, 0, 0.222000003, 0),
+                            UDim2.new(0.7, 0, -0.3, 0),
                             Enum.EasingDirection.Out,
                             Enum.EasingStyle.Quart,
                             .2,
@@ -1448,11 +1522,11 @@ function lib:Window(text, preset, closebind)
                         ):Play()
                         TweenService:Create(
                             FrameRainbowToggleCircle,
-                            TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                            TweenInfo.new(.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {BackgroundColor3 = Color3.fromRGB(50, 50, 50)}
                         ):Play()
                         FrameRainbowToggleCircle:TweenPosition(
-                            UDim2.new(0.127000004, 0, 0.222000003, 0),
+                            UDim2.new(-0.4, 0, -0.3, 0),
                             Enum.EasingDirection.Out,
                             Enum.EasingStyle.Quart,
                             .2,
@@ -1467,22 +1541,6 @@ function lib:Window(text, preset, closebind)
 
                         pcall(callback, BoxColor.BackgroundColor3)
                     end
-                end
-            )
-
-            ConfirmBtn.MouseButton1Click:Connect(
-                function()
-                    ColorSelection.Visible = false
-                    HueSelection.Visible = false
-                    Colorpicker:TweenSize(
-                        UDim2.new(0, 363, 0, 42),
-                        Enum.EasingDirection.Out,
-                        Enum.EasingStyle.Quart,
-                        .2,
-                        true
-                    )
-                    wait(.2)
-                    Tab.CanvasSize = UDim2.new(0, 0, 0, TabLayout.AbsoluteContentSize.Y)
                 end
             )
 
@@ -1526,6 +1584,23 @@ function lib:Window(text, preset, closebind)
             LabelTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             LabelTitle.TextSize = 14.000
             LabelTitle.TextXAlignment = Enum.TextXAlignment.Left
+
+            local LabelAnimation = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local LabelProps = {}
+
+            LabelProps.BackgroundTransparency = 0
+            LabelProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+            local TweenPlay8 = TweenService:Create(Label, LabelAnimation, LabelProps)
+            TweenPlay8:Play()
 
             MinimizeBtn.MouseButton1Click:Connect(function()
                 if Label.Visible == true then
@@ -1586,6 +1661,23 @@ function lib:Window(text, preset, closebind)
             TextBox.Text = ""
             TextBox.TextColor3 = Color3.fromRGB(255, 255, 255)
             TextBox.TextSize = 14.000
+
+            local TextboxAnimation = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local TextboxProps = {}
+
+            TextboxProps.BackgroundTransparency = 0
+            TextboxProps.Position = UDim2.new(0.154, 0, 0.216, 0)
+
+            local TweenPlay9 = TweenService:Create(Textbox, TextboxAnimation, TextboxProps)
+            TweenPlay9:Play()
 
             TextBox.FocusLost:Connect(
                 function(ep)
