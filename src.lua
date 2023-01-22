@@ -350,11 +350,28 @@ function lib:Window(text, preset, closebind)
 
             local NotificationFrameProps2 = {}
 
-            NotificationFrameProps2.BackgroundTransparency = 1
-            NotificationFrameProps2.Position = UDim2.new(1.83, 0, 0.932, 0)
+            NotificationFrameProps2.BackgroundTransparency = 0.5
 
             local TweenPlayNoti2 = TweenService:Create(NotificationFrame, NotificationFrameAnimation2, NotificationFrameProps2)
             TweenPlayNoti2:Play()
+
+            wait(1)
+
+            local NotificationFrameAnimation3 = TweenInfo.new(
+                0.5,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local NotificationFrameProps3 = {}
+
+            NotificationFrameProps3.Position = UDim2.new(1.83, 0, 0.932, 0)
+
+            local TweenPlayNoti3 = TweenService:Create(NotificationFrame, NotificationFrameAnimation3, NotificationFrameProps3)
+            TweenPlayNoti3:Play()
 
             wait(1)
                 
