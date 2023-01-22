@@ -175,6 +175,46 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.ClipsDescendants = false
     MinimizeBtn.Image = "rbxassetid://3926307971"
 
+    CloseBtn.MouseEnter:Connect(
+        function()
+            TweenService:Create(
+                CloseBtn,
+                TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                {ImageColor3 = Color3.fromRGB(255, 255, 255)}
+            ):Play()
+        end
+    )
+
+    CloseBtn.MouseLeave:Connect(
+        function()
+            TweenService:Create(
+                CloseBtn,
+                TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                {ImageColor3 = Color3.fromRGB(60, 60, 60)}
+            ):Play()
+        end
+    )
+
+    MinimizeBtn.MouseEnter:Connect(
+        function()
+            TweenService:Create(
+                MinimizeBtn,
+                TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                {ImageColor3 = Color3.fromRGB(255, 255, 255)}
+            ):Play()
+        end
+    )
+
+    MinimizeBtn.MouseLeave:Connect(
+        function()
+            TweenService:Create(
+                MinimizeBtn,
+                TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
+                {ImageColor3 = Color3.fromRGB(60, 60, 60)}
+            ):Play()
+        end
+    )
+
     local MainAnimation = TweenInfo.new(
         0.2,
         Enum.EasingStyle.Sine,
