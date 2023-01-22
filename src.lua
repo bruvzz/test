@@ -338,6 +338,24 @@ function lib:Window(text, preset, closebind)
 
         OkayBtn.MouseButton1Click:Connect(
             function()
+                
+            local NotificationFrameAnimation2 = TweenInfo.new(
+                0.2,
+                Enum.EasingStyle.Sine,
+                Enum.EasingDirection.In,
+                0,
+                false,
+                0
+            )
+
+            local NotificationFrameProps2 = {}
+
+            NotificationFrameProps2.BackgroundTransparency = 1
+            NotificationFrameProps2.Position = UDim2.new(1.83, 0, 0.932, 0)
+
+            local TweenPlayNoti2 = TweenService:Create(NotificationFrame, NotificationFrameAnimation2, NotificationFrameProps2)
+            TweenPlayNoti2:Play()
+                
                 NotificationFrame:Destroy()
             end
         )
