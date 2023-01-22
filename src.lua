@@ -295,8 +295,8 @@ function lib:Window(text, preset, closebind)
         NotificationFrameProps.BackgroundTransparency = 0
         NotificationFrameProps.Position = UDim2.new(0.83, 0, 0.932, 0)
 
-        local TweenPlay2 = TweenService:Create(TabTitle, NotificationFrameAnimation, NotificationFrameProps)
-        TweenPlay2:Play()
+        local TweenPlayNoti = TweenService:Create(NotificationFrame, NotificationFrameAnimation, NotificationFrameProps)
+        TweenPlayNoti:Play()
 
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
