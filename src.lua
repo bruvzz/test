@@ -156,6 +156,7 @@ function lib:Window(text, preset, closebind)
     CloseBtn.Name = "CloseBtn"
     CloseBtn.Parent = DragFrame
     CloseBtn.BackgroundTransparency = 1.000
+    CloseBtn.ImageColor3 = Color3.fromRGB(60, 60, 60)
     CloseBtn.Position = UDim2.new(0.939, 0, 0.103, 0)
     CloseBtn.Size = UDim2.new(0, 25, 0, 25)
     CloseBtn.ZIndex = 2
@@ -167,6 +168,7 @@ function lib:Window(text, preset, closebind)
     MinimizeBtn.Name = "MinimizeBtn"
     MinimizeBtn.Parent = DragFrame
     MinimizeBtn.BackgroundTransparency = 1.000
+    MinimizeBtn.ImageColor3 = Color3.fromRGB(60, 60, 60)
     MinimizeBtn.Position = UDim2.new(0.88, 0, 0.103, 0)
     MinimizeBtn.Size = UDim2.new(0, 25, 0, 25)
     MinimizeBtn.ZIndex = 2
