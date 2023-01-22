@@ -355,6 +355,8 @@ function lib:Window(text, preset, closebind)
 
             local TweenPlayNoti2 = TweenService:Create(NotificationFrame, NotificationFrameAnimation2, NotificationFrameProps2)
             TweenPlayNoti2:Play()
+
+            wait(1)
                 
                 NotificationFrame:Destroy()
             end
