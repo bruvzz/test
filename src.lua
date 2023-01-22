@@ -104,6 +104,7 @@ function lib:Window(text, preset, closebind)
     Main.Parent = ui
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+    Main.BackgroundTransparency = 1.000
     Main.BorderSizePixel = 0
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 547, 0, 391)
@@ -327,7 +328,7 @@ function lib:Window(text, preset, closebind)
         TabTitle.Name = "TabTitle"
         TabTitle.Parent = TabBtn
         TabTitle.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-        TabTitle.BackgroundTransparency = 0
+        TabTitle.BackgroundTransparency = 1.000
         TabTitle.Size = UDim2.new(0, 107, 0, 21)
         TabTitle.Position = UDim2.new(0.154, 0, 0.216, 0)
         TabTitle.Font = Enum.Font.Gotham
@@ -433,6 +434,7 @@ function lib:Window(text, preset, closebind)
             Button.Name = "Button"
             Button.Parent = Tab
             Button.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+            Button.BackgroundTransparency = 1.000
             Button.Size = UDim2.new(0, 379, 0, 42)
             Button.AutoButtonColor = false
             Button.Font = Enum.Font.SourceSans
@@ -526,6 +528,7 @@ function lib:Window(text, preset, closebind)
             Toggle.Name = "Toggle"
             Toggle.Parent = Tab
             Toggle.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+            Toggle.BackgroundTransparency = 1.000
             Toggle.Position = UDim2.new(0.215625003, 0, 0.446271926, 0)
             Toggle.Size = UDim2.new(0, 379, 0, 42)
             Toggle.AutoButtonColor = false
@@ -748,6 +751,7 @@ function lib:Window(text, preset, closebind)
             Slider.Name = "Slider"
             Slider.Parent = Tab
             Slider.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+            Slider.BackgroundTransparency = 1.000
             Slider.Position = UDim2.new(-0.48035714, 0, -0.570532918, 0)
             Slider.Size = UDim2.new(0, 379, 0, 60)
             Slider.AutoButtonColor = false
@@ -901,6 +905,7 @@ function lib:Window(text, preset, closebind)
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = Tab
             Dropdown.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+            Dropdown.BackgroundTransparency = 1.000
             Dropdown.ClipsDescendants = true
             Dropdown.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
             Dropdown.Size = UDim2.new(0, 379, 0, 42)
@@ -1127,6 +1132,7 @@ function lib:Window(text, preset, closebind)
             Colorpicker.Name = "Colorpicker"
             Colorpicker.Parent = Tab
             Colorpicker.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+            Colorpicker.BackgroundTransparency = 1.000
             Colorpicker.ClipsDescendants = true
             Colorpicker.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
             Colorpicker.Size = UDim2.new(0, 379, 0, 42)
@@ -1564,6 +1570,7 @@ function lib:Window(text, preset, closebind)
             Label.Name = "Button"
             Label.Parent = Tab
             Label.BackgroundColor3 = Color3.fromRGB(33, 33, 33)
+            Label.BackgroundTransparency = 1.000
             Label.Size = UDim2.new(0, 379, 0, 42)
             Label.AutoButtonColor = false
             Label.Font = Enum.Font.SourceSans
@@ -1624,6 +1631,7 @@ function lib:Window(text, preset, closebind)
             Textbox.Name = "Textbox"
             Textbox.Parent = Tab
             Textbox.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+            Textbox.BackgroundTransparency = 1.000
             Textbox.ClipsDescendants = true
             Textbox.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
             Textbox.Size = UDim2.new(0, 379, 0, 42)
