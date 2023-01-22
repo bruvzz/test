@@ -249,19 +249,54 @@ function lib:Window(text, preset, closebind)
 
     function lib:Notification(texttitle, textdesc, textbtn)
         local NotificationFrame = Instance.new("Frame")
+        local NotificationFrameCorner = Instance.new("UICorner")
         local OkayBtn = Instance.new("ImageButton")
         local NotificationTitle = Instance.new("TextLabel")
         local NotificationDesc = Instance.new("TextLabel")
+        local NotificationIndicator = Instance.new("Frame")
+        local NotificationIndicatorCorner = Instance.new("UICorner")
 
         NotificationFrame.Name = "NotificationFrame"
         NotificationFrame.Parent = ui
         NotificationFrame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+        NotificationFrame.BackgroundTransparency = 1.000
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
-        NotificationFrame.Position = UDim2.new(0.841, 0, 2, 0)
-        NotificationFrame.Size = UDim2.new(0, 306, 0, 130)
+        NotificationFrame.Position = UDim2.new(1.83, 0, 0.932, 0)
+        NotificationFrame.Size = UDim2.new(0, 306, 0, 48)
 
-        NotificationFrame:TweenPosition(UDim2.new(0.840, 0, 0.875, 0), "Out", "Sine", .3, true)
+        NotificationFrameCorner.CornerRadius = UDim.new(0, 4)
+        NotificationFrameCorner.Name = "NotificationFrameCorner"
+        NotificationFrameCorner.Parent = NotificationFrame
+
+        NotificationIndicator.Name = "NotificationIndicator"
+        NotificationIndicator.Parent = NotificationFrame
+        NotificationIndicator.BackgroundColor3 = PresetColor
+        NotificationIndicator.BorderSizePixel = 0
+        NotificationIndicator.ClipsDescendants = true
+        NotificationIndicator.Position = UDim2.new(0, 0, 0, 0)
+        NotificationIndicator.Size = UDim2.new(0, 6, 0, 48)
+
+        NotificationIndicatorCorner.CornerRadius = UDim.new(0, 4)
+        NotificationIndicatorCorner.Name = "NotificationIndicatorCorner"
+        NotificationIndicatorCorner.Parent = NotificationIndicator
+
+        local NotificationFrameAnimation = TweenInfo.new(
+            0.2,
+            Enum.EasingStyle.Sine,
+            Enum.EasingDirection.In,
+            0,
+            false,
+            0
+        )
+
+        local NotificationFrameProps = {}
+
+        NotificationFrameProps.BackgroundTransparency = 0
+        NotificationFrameProps.Position = UDim2.new(0.83, 0, 0.932, 0)
+
+        local TweenPlay2 = TweenService:Create(TabTitle, NotificationFrameAnimation, NotificationFrameProps)
+        TweenPlay2:Play()
 
         OkayBtn.Name = "OkayBtn"
         OkayBtn.Parent = NotificationFrame
