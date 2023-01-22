@@ -262,7 +262,7 @@ function lib:Window(text, preset, closebind)
         NotificationFrame.BackgroundTransparency = 1.000
         NotificationFrame.BorderSizePixel = 0
         NotificationFrame.ClipsDescendants = true
-        NotificationFrame.Position = UDim2.new(1.83, 0, 0.932, 0)
+        NotificationFrame.Position = UDim2.new(0.83, 0, 0.932, 0)
         NotificationFrame.Size = UDim2.new(0, 306, 0, 48)
 
         NotificationFrameCorner.CornerRadius = UDim.new(0, 4)
@@ -326,7 +326,7 @@ function lib:Window(text, preset, closebind)
         NotificationDesc.Parent = NotificationFrame
         NotificationDesc.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         NotificationDesc.BackgroundTransparency = 1.000
-        NotificationDesc.Position = UDim2.new(0.059, 0, 0.308, 0)
+        NotificationDesc.Position = UDim2.new(0.046, 0, 0.514, 0)
         NotificationDesc.Size = UDim2.new(0, 278, 0, 83)
         NotificationDesc.Font = Enum.Font.Gotham
         NotificationDesc.Text = textdesc
